@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.9.1)
+  - PoilabsVdNavigation (3.0.10):
+    - Alamofire (~> 4.9.1)
+
+DEPENDENCIES:
+  - PoilabsVdNavigation
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PoilabsVdNavigation
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  PoilabsVdNavigation: 3fe0fa62007e27e18cd67de4f0164b9381c3bf22
+
+PODFILE CHECKSUM: 66bb7c37ccfb5b66758e23ceacf190cc5a7e6091
+
+COCOAPODS: 1.11.2
