@@ -10,22 +10,24 @@ import PoilabsVdNavigationUI
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let lang = Locale.current.languageCode ?? "tr"
+    // SDK nesnesi SDK ekranı açık kaldığı sürece tutulmalı.
+    private var poilabsVdNavigation: PoilabsVdNavigationUI?
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard poilabsVdNavigation == nil else { return }
+
         let appId = "APPLICATION_ID"
         let secret = "APPLICATION_SECRET_KEY"
         let uniqueIdentifier = "UNIQUE_ID"
 
-        PoilabsVdNavigationUI(withApplicationID: appId,
-                            withApplicationSecret: secret,
-                            withUniqueIdentifier: uniqueIdentifier,
-                            lang: lang) { (controller) in
-                    //show controller
-                }
+        poilabsVdNavigation = PoilabsVdNavigationUI(withApplicationID: appId,
+                                                    withApplicationSecret: secret,
+                                                    withUniqueIdentifier: uniqueIdentifier) { [weak self] controller in
+            DispatchQueue.main.async {
+                controller.modalPresentationStyle = .fullScreen
+                self?.present(controller, animated: true)
+            }
+        }
     }
-
-
 }
-

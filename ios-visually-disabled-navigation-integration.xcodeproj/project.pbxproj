@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		528183B926FCA215103CF25D /* Pods_ios_visually_disabled_navigation_integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AA1EB13AA8BF07E84BA1A0 /* Pods_ios_visually_disabled_navigation_integration.framework */; };
+		98FBF179FBB879174268ABAA /* PoilabsVdNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FB8DF3E8AD34E0E9C19988AD /* PoilabsVdNavigation */; };
 		C3B0C29F2720511A00698164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0C29E2720511A00698164 /* AppDelegate.swift */; };
 		C3B0C2A12720511A00698164 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0C2A02720511A00698164 /* SceneDelegate.swift */; };
 		C3B0C2A32720511A00698164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0C2A22720511A00698164 /* ViewController.swift */; };
@@ -17,9 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		228F150309E8AD89C9ADDAD8 /* Pods-ios-visually-disabled-navigation-integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-visually-disabled-navigation-integration.debug.xcconfig"; path = "Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration.debug.xcconfig"; sourceTree = "<group>"; };
-		2C877F46F7B4D4BF1193D7D1 /* Pods-ios-visually-disabled-navigation-integration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-visually-disabled-navigation-integration.release.xcconfig"; path = "Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration.release.xcconfig"; sourceTree = "<group>"; };
-		40AA1EB13AA8BF07E84BA1A0 /* Pods_ios_visually_disabled_navigation_integration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_visually_disabled_navigation_integration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B0C29B2720511A00698164 /* ios-visually-disabled-navigation-integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-visually-disabled-navigation-integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B0C29E2720511A00698164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B0C2A02720511A00698164 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,38 +32,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528183B926FCA215103CF25D /* Pods_ios_visually_disabled_navigation_integration.framework in Frameworks */,
+				98FBF179FBB879174268ABAA /* PoilabsVdNavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0ACC704F7C840B0171E0199A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				40AA1EB13AA8BF07E84BA1A0 /* Pods_ios_visually_disabled_navigation_integration.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		87B6032EAA8B63CFC1EAFE38 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				228F150309E8AD89C9ADDAD8 /* Pods-ios-visually-disabled-navigation-integration.debug.xcconfig */,
-				2C877F46F7B4D4BF1193D7D1 /* Pods-ios-visually-disabled-navigation-integration.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		C3B0C2922720511A00698164 = {
 			isa = PBXGroup;
 			children = (
 				C3B0C29D2720511A00698164 /* ios-visually-disabled-navigation-integration */,
 				C3B0C29C2720511A00698164 /* Products */,
-				87B6032EAA8B63CFC1EAFE38 /* Pods */,
-				0ACC704F7C840B0171E0199A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,18 +76,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3B0C2AF2720511D00698164 /* Build configuration list for PBXNativeTarget "ios-visually-disabled-navigation-integration" */;
 			buildPhases = (
-				9C3DD3DA915BC1F31BB6A74C /* [CP] Check Pods Manifest.lock */,
 				C3B0C2972720511A00698164 /* Sources */,
 				C3B0C2982720511A00698164 /* Frameworks */,
 				C3B0C2992720511A00698164 /* Resources */,
-				981126288F9B7ABE46170751 /* [CP] Embed Pods Frameworks */,
-				B843A386E2244A9F3CD45425 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "ios-visually-disabled-navigation-integration";
+			packageProductDependencies = (
+				FB8DF3E8AD34E0E9C19988AD /* PoilabsVdNavigation */,
+			);
 			productName = "ios-visually-disabled-navigation-integration";
 			productReference = C3B0C29B2720511A00698164 /* ios-visually-disabled-navigation-integration.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +116,9 @@
 				Base,
 			);
 			mainGroup = C3B0C2922720511A00698164;
+			packageReferences = (
+				9CD19D847A679B04BF979825 /* XCRemoteSwiftPackageReference "ios-vd-navigation-pod" */,
+			);
 			productRefGroup = C3B0C29C2720511A00698164 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,65 +140,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		981126288F9B7ABE46170751 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C3DD3DA915BC1F31BB6A74C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ios-visually-disabled-navigation-integration-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B843A386E2244A9F3CD45425 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-visually-disabled-navigation-integration/Pods-ios-visually-disabled-navigation-integration-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3B0C2972720511A00698164 /* Sources */ = {
@@ -371,7 +292,6 @@
 		};
 		C3B0C2B02720511D00698164 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 228F150309E8AD89C9ADDAD8 /* Pods-ios-visually-disabled-navigation-integration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -401,7 +321,6 @@
 		};
 		C3B0C2B12720511D00698164 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C877F46F7B4D4BF1193D7D1 /* Pods-ios-visually-disabled-navigation-integration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CD19D847A679B04BF979825 /* XCRemoteSwiftPackageReference "ios-vd-navigation-pod" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/poiteam/ios-vd-navigation-pod.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB8DF3E8AD34E0E9C19988AD /* PoilabsVdNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CD19D847A679B04BF979825 /* XCRemoteSwiftPackageReference "ios-vd-navigation-pod" */;
+			productName = PoilabsVdNavigation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3B0C2932720511A00698164 /* Project object */;
 }
