@@ -19,7 +19,7 @@ use_frameworks!
 pod 'PoilabsVdNavigation'
 ```
 
-Until 7.2.1 is published on CocoaPods trunk, use the git tag to get it:
+PoilabsVdNavigation is no longer updated on CocoaPods trunk (the latest version there is 7.1.0). Swift Package Manager is the recommended installation method. To use a newer version with CocoaPods, install it from the git tag:
 
 ``` ruby
 pod 'PoilabsVdNavigation', :git => 'https://github.com/poiteam/ios-vd-navigation-pod.git', :tag => '7.2.1'
