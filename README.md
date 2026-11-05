@@ -10,7 +10,7 @@ PoilabsVdNavigation is distributed with Swift Package Manager. CocoaPods is no l
 
 1. In Xcode, select **File > Add Package Dependencies...**
 2. Enter the repository URL: `https://github.com/poiteam/ios-vd-navigation-pod.git`
-3. Choose **Exact Version** `7.2.2` and add the **PoilabsVdNavigation** product to your app target.
+3. Choose **Exact Version** `7.3.0` and add the **PoilabsVdNavigation** product to your app target.
 
 PoilabsPositioning, PoilabsSdkAnalytics and PoilabsCore are resolved automatically. SPM installation is supported from 7.2.1.
 
@@ -45,3 +45,21 @@ poilabsVdNavigation = PoilabsVdNavigationUI(withApplicationID: "APPLICATION_ID",
     }
 }
 ```
+
+### Opening a specific venue (placeId)
+
+From **7.3.0** you can open one venue directly instead of the venue list by passing its `placeId`. Ask PoiLabs for the `placeId` values of your venues. If you pass `nil`, an empty string or a `placeId` that is not one of your application's venues, the SDK opens the venue list as before.
+
+``` Swift
+poilabsVdNavigation = PoilabsVdNavigationUI(withApplicationID: "APPLICATION_ID",
+                                            withApplicationSecret: "APPLICATION_SECRET_KEY",
+                                            withUniqueIdentifier: "UNIQUE_ID",
+                                            placeId: "PLACE_ID") { [weak self] controller in
+    DispatchQueue.main.async {
+        controller.modalPresentationStyle = .fullScreen
+        self?.present(controller, animated: true)
+    }
+}
+```
+
+See the [SDK README](https://github.com/poiteam/ios-vd-navigation-pod#opening-a-specific-venue-placeid) for details.
