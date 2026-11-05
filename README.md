@@ -64,31 +64,4 @@ poilabsVdNavigation = PoilabsVdNavigationUI(withApplicationID: "APPLICATION_ID",
 
 See the [SDK README](https://github.com/poiteam/ios-vd-navigation-pod#opening-a-specific-venue-placeid) for details.
 
-### Closing the SDK screen
-
-The SDK screen has no close button of its own. Pass an `additionalButton`: the SDK shows it on its first screen (the venue list, or the store list when you pass a `placeId`) and calls `poilabsVdNavigationDidTapOnAdditionalButton()` when it is tapped. Dismiss the SDK screen there.
-
-``` Swift
-poilabsVdNavigation = PoilabsVdNavigationUI(withApplicationID: "APPLICATION_ID",
-                                            withApplicationSecret: "APPLICATION_SECRET_KEY",
-                                            withUniqueIdentifier: "UNIQUE_ID",
-                                            additionalButton: AdditionalButton(icon: UIImage(systemName: "xmark") ?? UIImage(),
-                                                                               title: "Close")) { [weak self] controller in
-    DispatchQueue.main.async {
-        controller.modalPresentationStyle = .fullScreen
-        self?.present(controller, animated: true)
-    }
-}
-poilabsVdNavigation?.delegate = self
-
-extension ViewController: PoilabsVdNavigationDelegate {
-    func poilabsVdNavigationDidTapOnAdditionalButton() {
-        presentedViewController?.dismiss(animated: true)
-        poilabsVdNavigation = nil
-    }
-}
-```
-
-`UIImage(systemName:)` needs iOS 13; on iOS 12 use your own image.
-
 **Using with PoilabsNavigation:** Do not keep both SDKs open at the same time: they use the same positioning and Bluetooth scanning. Close one SDK screen before you open the other.
